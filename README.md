@@ -12,8 +12,8 @@
 
 1. В командной строке перейти в папку backend/kanban_back/ и запустить команды:
 
-      docker-compose -f local.yml build
+       docker-compose -f local.yml build
         
-      docker-compose -f local.yml up
+       docker-compose -f local.yml up
     
 2. Приложение будет развернуто по адресу: http://localhost:8080
