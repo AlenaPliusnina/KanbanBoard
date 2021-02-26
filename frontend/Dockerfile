@@ -1,13 +1,13 @@
 FROM node:alpine
 
-RUN npm install -g vue-cli
+WORKDIR /app/
 
-WORKDIR '/app'
+COPY package.json /app/
 
-COPY ./package*.json ./
+RUN npm install
 
-RUN npm install -g npm@7.6.0
+ENV PATH /app/node_modules/.bin:$PATH
 
-COPY ./ ./
+COPY . /app/
 
 CMD [ "npm", "run", "dev"]
